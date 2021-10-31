@@ -47,5 +47,9 @@
     "prop-types": "^15.7.2",
     "react-is": "^16.13.1",
     "webpack-bundle-analyzer": "^3.8.0"
+  },
+  "resolutions": {
+    "babel-loader": "8.1.0",
+    "webpack": "4.42.0"
   }
 }

@@ -23,7 +23,7 @@ jobs:
       - uses: actions/setup-node@v2.4.1
         with:
           node-version: ${{matrix.node}}
-      - run: yarn install --immutable=false
+      - run: yarn install
       - run: yarn build-storybook
       - run: yarn build
       - run: yarn test
@@ -46,7 +46,7 @@ jobs:
       - uses: actions/setup-node@v2.4.1
         with:
           node-version: ${{matrix.node}}
-      - run: yarn install --immutable=false
+      - run: yarn install
       - run: yarn build-storybook
       - run: yarn build
       - run: yarn test
@@ -69,7 +69,7 @@ jobs:
       - uses: actions/setup-node@v2.4.1
         with:
           node-version: ${{matrix.node}}
-      - run: yarn install --immutable=false
+      - run: yarn install
       - run: yarn build-storybook
       - run: yarn build
       - run: yarn test

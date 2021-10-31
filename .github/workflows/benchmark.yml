@@ -16,12 +16,14 @@ jobs:
           - macos-latest
           - ubuntu-latest
           - windows-latest
+    defaults:
+      run:
+        working-directory: single-yarn-nm
     steps:
       - uses: actions/checkout@v2.3.5
       - uses: actions/setup-node@v2.4.1
         with:
           node-version: ${{matrix.node}}
-      - run: cd single-yarn-nm
       - run: yarn install
       - run: yarn build-storybook
       - run: yarn build
@@ -38,6 +40,9 @@ jobs:
           - macos-latest
           - ubuntu-latest
           - windows-latest
+    defaults:
+      run:
+        working-directory: single-yarn
     steps:
       - uses: actions/checkout@v2.3.5
       - uses: actions/setup-node@v2.4.1
@@ -60,6 +65,9 @@ jobs:
           - macos-latest
           - ubuntu-latest
           - windows-latest
+    defaults:
+      run:
+        working-directory: single-yarn-compressed
     steps:
       - uses: actions/checkout@v2.3.5
       - uses: actions/setup-node@v2.4.1
